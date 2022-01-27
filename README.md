@@ -1,5 +1,10 @@
 # Trabalho de Redes 2
-##### Repositório que será usado para o trabalho de Redes 2, conforme definido nas regras do projeto.
+#### Repositório que será usado para o trabalho de Redes 2, conforme definido nas regras do projeto.
+
+## Alunos
+- Adriano Souza
+- André Balbi
+- Vitor Prado
 
 ### Tecnologias Usadas
 
