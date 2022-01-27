@@ -5,7 +5,7 @@ import requests
 import json
 import os
 
-os.chdir("trabalhoRedes2")
+#os.chdir("trabalhoRedes2")
 
 
 def socket_way():
@@ -30,8 +30,8 @@ def socket_way():
 
 
 def request_way():
-    ip = "192.168.0.110"
-    port = "8080"
+    ip = "http://localhost"
+    port = "8000"
     n_of_requests = 10
     json_filename = "message.json"
     responses = {}
@@ -46,7 +46,7 @@ def request_way():
                         data=json.dumps(parsed_json),
                         headers={"Content-Type": "application/json"}
         )
-        responses[i] = data.response
+        responses[i] = data.text
         print(f"Request {i} sent, response was:\n{responses[i]}\nEOR\n")
 
 

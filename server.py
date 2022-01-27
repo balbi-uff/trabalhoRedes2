@@ -6,7 +6,7 @@ import os
 
 
 hostName = "localhost"
-serverPort = 8080 # You can choose any available port; by default, it is 8000
+serverPort = 8000 # You can choose any available port; by default, it is 8000
 
 def checkRequest(response, headers, packageName):
     
@@ -54,7 +54,7 @@ class MyServer(BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":        
-    webServer = HTTPServer((hostName, serverPort), MyServer)
+    webServer = HTTPServer(("", serverPort), MyServer)
     print("Server started http://%s:%s" % (hostName, serverPort))  #Server starts
 try:
     webServer.serve_forever()
