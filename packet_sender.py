@@ -29,3 +29,4 @@ def request_way():
     port = 8080
     n_of_requests = 10
 
+    requests.post()
