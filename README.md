@@ -6,7 +6,7 @@
 - André Balbi
 - Vitor Prado
 
-### Tecnologias Usadas
+## Tecnologias Usadas
 
 - Python
 	- requests.py
@@ -15,7 +15,7 @@
 - Git (GitHub)
 - Wireshark com Modo Monitor (Kali Linux - Raspberry Pi 3)
 
-### Funcionamento da Aplicação
+## Funcionamento da Aplicação
 
 Nossa aplicação gira em torno de uma troca de pacotes feitos de uma maneira insegura.
 Nosso objetivo é demonstrar a importância tanto de criptografia quanto de segurança e controle na rede.
