@@ -34,12 +34,23 @@ class MyServer(BaseHTTPRequestHandler):
             for line in packageFile:
                 self.wfile.write(bytes(line, "utf-8"))
 
-
+# TRANSFORMAR EM JSON
+# TESTAR POST E GET ENTRE O PC E O LAPTOP 
 
     def do_GET(self):
         print(os.listdir())
-        os.chdir(r"programaPython\testPackets")
-        self.buildHTTPResponse(200, [["Content-type", "text/html"]], "test.html")
+        
+        self.buildHTTPResponse(200, [["Content-type", "application/json"]], "test.json")
+
+    def do_POST(self):
+        content_len = int(self.headers.get('Content-Length'))
+        post_body = self.rfile.read(content_len)    
+        
+        print("POST REQUEST RECEIVED - READING PACKAGE")
+        print(post_body)
+        
+        self.buildHTTPResponse(200, [["Content-type", "application/json"]], "response.json")
+        print("POST REQUEST RECEIVED - RESPONSE SENT")
 
 
 if __name__ == "__main__":        
@@ -51,4 +62,3 @@ except KeyboardInterrupt:
     pass
     webServer.server_close()  #Executes when you hit a keyboard interrupt (ctrl + c), closing the server
     print("Server stopped.")
-
