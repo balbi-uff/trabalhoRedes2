@@ -32,4 +32,4 @@ No nosso exemplo, um usuário está fazendo login no seu serviço bancário. Um 
 
 
 
-###### versão 3.2 beta
+###### versão 4.0 PRODUÇÃO - APRESENTAÇÃO
