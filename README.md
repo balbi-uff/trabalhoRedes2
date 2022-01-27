@@ -1,31 +1,35 @@
 # trabalhoRedes2
 ##### Repositório que será usado para o trabalho de Redes 2, conforme definido nas regras do projeto.
 
+### Tecnologias Usadas
 
+- Python
+	- requests.py
+	- json.py
+	- http.py (http.server)
+- Git (GitHub)
+- Wireshark com Modo Monitor (Kali Linux - Raspberry Pi 3)
 
-#### Plano do Balbi
+### Funcionamento da Aplicação
 
-Meu plano é a gente fazer uma API que recebe e envia mensagens entre dois clientes, agindo de maneira de intermediação entre eles. 
-EX: 
-cliente 1 envia mensagem "oi" para o cliente 2
-servidor recebe "oi" e confirma para o cliente 1 que recebeu
-servidor envia "oi" para cliente 2
-cliente 2 recebe "oi" e confirma para o servidor que recebeu
-segue o fluxo
+Nossa aplicação gira em torno de uma troca de pacotes feitos de uma maneira insegura.
+Nosso objetivo é demonstrar a importância tanto de criptografia quanto de segurança e controle na rede.
 
-Por enquanto nao tem nada aqui mas um dia tera
+No nosso trabalho, desativamos a segurança da rede wifi, com o objetivo de deixar que os pacotes transmitidos na rede fossem expostos. Num contexto de segurança WPA2 (padrão nas redes wireless), os pacotes são criptografados. 
 
+Depois, criamos um servidor HTTP simples, cujo propósito é receber e transmitir pacotes de volta.
 
-
-
-
-
-
-
-
+No nosso exemplo, um usuário está fazendo login no seu serviço bancário. Um login tanto programado de forma insegura quanto feito de maneira sem segurança. Num caso desses, um hacker em potêncial tem acesso praticamente imediato às suas informações.  
 
 
 
 
 
-###### versão 0.1
+
+
+
+
+
+
+
+###### versão 3.2 beta
