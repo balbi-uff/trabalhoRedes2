@@ -30,7 +30,7 @@ def socket_way():
 
 
 def request_way():
-    ip = "http://localhost"
+    ip = "http://192.168.0.109"
     port = "8000"
     n_of_requests = 10
     json_filename = "message.json"
