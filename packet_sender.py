@@ -3,6 +3,10 @@ import random
 import time
 import requests
 import json
+import os
+
+os.chdir("trabalhoRedes2")
+
 
 def socket_way():
     socket_ = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -27,19 +31,27 @@ def socket_way():
 
 def request_way():
     ip = "192.168.0.110"
-    port = 8080
+    port = "8080"
     n_of_requests = 10
-    json_data = "message.json"
+    json_filename = "message.json"
     responses = {}
     
-    parsed_json = (json.loads(json_data))
+    with open(json_filename) as json_file:
+        json_data = json_file.read()
+        parsed_json = (json.loads(json_data))
 
     for i in range(n_of_requests):
         data = requests.post(
-                        url=ip,
-                        port=port,
+                        url=ip + ":" + port,
                         data=json.dumps(parsed_json),
                         headers={"Content-Type": "application/json"}
         )
         responses[i] = data.response
         print(f"Request {i} sent, response was:\n{responses[i]}\nEOR\n")
+
+
+try:
+    request_way()
+except requests.exceptions.InvalidSchema as e:
+    print("SERVER WAS NOT FOUND!")
+    print(f"Error: {e}")
