@@ -2,21 +2,9 @@ import time
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import os
 
-# peguei isso de um link que obv q um dev front end escreveu de tao malfeito q tava, reajustei oq achei bom
-
 
 hostName = "localhost"
 serverPort = 8000 # You can choose any available port; by default, it is 8000
-
-def checkRequest(response, headers, packageName):
-    
-    if not response in [200, 201, 500, 400, 404, 401, 403, 405]:
-        if headers:
-            if type(packageName) == str:
-                return True
-    return False
-    
-
 
 class MyServer(BaseHTTPRequestHandler):  
     def buildHTTPResponse(self, response, headers, packageFilename):
@@ -34,8 +22,6 @@ class MyServer(BaseHTTPRequestHandler):
             for line in packageFile:
                 self.wfile.write(bytes(line, "utf-8"))
 
-# TRANSFORMAR EM JSON
-# TESTAR POST E GET ENTRE O PC E O LAPTOP 
 
     def do_GET(self):
         print(os.listdir())
