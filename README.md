@@ -1,10 +1,18 @@
 # Trabalho de Redes 2
-#### Repositório que será usado para o trabalho de Redes 2, conforme definido nas regras do projeto.
+#### Repositório usado para o trabalho de Redes de Computadores 2, conforme definido nas regras do projeto.
 
-## Alunos
+## Alunos - Grupo Tubarão no Fio
 - Adriano Souza
 - André Balbi
 - Vitor Prado
+
+## Descrição do Projeto
+
+Nosso projeto consiste em ressaltar a relevância da utilização de segurança nas redes, por meio de um exemplo prático. 
+
+Para isso, montamos um cenário de uma rede desprotegida, sem segurança, na qual um cliente troca informações sensíveis com um servidor, e depois, um terceiro host, também presente na rede, consegue interceptar e ler os pacotes pertencentes a conexão alheia. 
+
+Dessa forma, nosso objetivo é demonstrar a vulnerabilidade existente em conexões desprotegidas, e consequentemente, evidenciar a importância da utilização de protocolos de segurança nas redes.
 
 ## Tecnologias Usadas
 
@@ -18,13 +26,20 @@
 ## Funcionamento da Aplicação
 
 Nossa aplicação gira em torno de uma troca de pacotes feitos de uma maneira insegura.
-Nosso objetivo é demonstrar a importância tanto de criptografia quanto de segurança e controle na rede.
 
-No nosso trabalho, desativamos a segurança da rede wifi, com o objetivo de deixar que os pacotes transmitidos na rede fossem expostos. Num contexto de segurança WPA2 (padrão nas redes wireless), os pacotes são criptografados. 
+Então o primeiro passo é desativar a segurança da rede wifi, com o objetivo de deixar que os pacotes transmitidos na rede sejam expostos. Num contexto de segurança WPA2 (padrão nas redes wireless), os pacotes são criptografados. 
 
 Depois, criamos um servidor HTTP simples, cujo propósito é receber e transmitir pacotes de volta.
 
 No nosso exemplo, um usuário está fazendo login no seu serviço bancário. Um login tanto programado de forma insegura quanto feito de maneira sem segurança. Num caso desses, um hacker em potêncial tem acesso praticamente imediato às suas informações.  
+
+Com o cenário de uma rede insegura na qual o usuário está trocando informações com o servidor, o ambiente de demonstração está pronto.
+
+Por fim, utilizamos um Raspberry, capturando pacotes em modo monitor com Wireshark, para detectar e interceptar a conexão alheia, e ler os pacotes. Assim, o Raspberry, que está de fora da conexão entre o usuário e o servidor, conseguiu obter as informações de terceiros.
+
+## Contribuições 
+
+Queremos agradecer ao professor Flávio Seixas por ter emprestado ao grupo um Raspberry Pi 3, no qual é o dispositivo mais prático para se utilizar o modo monitor e realizar o nosso trabalho.
 
 
 
