@@ -73,4 +73,4 @@ Queremos agradecer ao professor Flávio Seixas por ter emprestado ao grupo um Ra
 
 
 
-###### versão 4.1 PRODUÇÃO - APRESENTAÇÃO
+###### versão 4.2 PRODUÇÃO - DOCUMENTAÇÃO COMPLETA ######
