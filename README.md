@@ -28,16 +28,18 @@ Dessa forma, nosso objetivo é demonstrar a vulnerabilidade existente em conexõ
 #### Instalação dos programas Cliente e Servidor
 1. Instale Python 3.6+
 2. Instale o pacote requests usando pip
-> '$ pip install requests'
+> `$ pip install requests`
 3. Execute o programa servidor e cliente, respectivamente.
 
 #### Espião
 1. Ative o modo monitor no computador
 > https://www.youtube.com/watch?v=xmQUVwCuxOk
 2. Instale o Wireshark e depois abra-o
-> `sudo apt-get install wireshark`
-> `sudo bash` 
-> `wireshark`
+> `$ sudo apt-get install wireshark`
+
+> `$ sudo bash` 
+
+> `$ wireshark`
 3. Inicie a captura de pacotes, filtrando pelo endereço IPv4 do cliente na rede.
 4. Inicie o programa servidor.
 5. Inicie o programa cliente.
