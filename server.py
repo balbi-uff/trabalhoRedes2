@@ -3,13 +3,11 @@ from http.server import BaseHTTPRequestHandler, HTTPServer
 import os
 
 
-hostName = "localhost"
-serverPort = 8000 # You can choose any available port; by default, it is 8000
+hostName = "localhost" 
+serverPort = 8000 # porta do servidor
 
 class MyServer(BaseHTTPRequestHandler):  
     def buildHTTPResponse(self, response, headers, packageFilename):
-        #if checkRequest(response, headers, packageFilename):
-            # response
         self.send_response(response)
         
         # headers 
@@ -28,6 +26,8 @@ class MyServer(BaseHTTPRequestHandler):
         
         self.buildHTTPResponse(200, [["Content-type", "application/json"]], "test.json")
 
+
+    # caso POST seja chamado, eu mando o arquivo de resposta
     def do_POST(self):
         content_len = int(self.headers.get('Content-Length'))
         post_body = self.rfile.read(content_len)    
